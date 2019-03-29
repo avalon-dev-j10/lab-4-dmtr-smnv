@@ -1,38 +1,26 @@
 package ru.avalon.java.dev.j10.labs;
 
 import java.util.Comparator;
+import java.util.Random;
+import java.util.Date;
 
 public class Main {
 
     public static void main(String[] args) {
-        /*
-         * TODO(Студент): Проинициализируйте массив strings
-         *
-         * Массив слелдует проинициализировать таким образом,
-         * чтобы он содержал 20 строк, расположенных не
-         * по порядку.
-         */
-	    String[] strings = null;
 
-	    /*
-	     * TODO(Студент): Проинициализируйте массив persons
-	     *
-	     * 1. Создайте класс, реализующий интерфейс Person.
-	     *
-	     * 2. Проинициализируйте массив persons 20
-	     *    экземплярыми созданного класса.
-	     */
-	    Person[] persons = null;
+        String[] strings = new String[20];
+        for (int i = 0; i < strings.length; i++) {
+            strings[i] = "Случайная строка " + new Random().nextInt(21);
+        }
 
-        /*
-         * TODO(Студент): Проинициализируйте переменную sort
-         *
-         * 1. Создайте класс, реализующий интерфейс Sort
-         *
-         * 2. Проинициализируйте переменную sort экземпляром
-         *    созданного класса.
-         */
-        Sort sort = null;
+        Person[] persons = new Employee[20];
+        for (int i = 0; i < persons.length; i++) {
+            persons[i] = new Employee(
+                    "John Doe " + new Random().nextInt(21),
+                    new Date(new Random().nextInt(Integer.MAX_VALUE)));
+        }
+
+        Sort sort = new Sorter();
 
         /*
          * TODO(Студент): Проинициализируйте переменную comparator
@@ -44,7 +32,7 @@ public class Main {
          * 2. Проинициализируйте переменную comparator
          *    экземпляром созданного класса.
          */
-        Comparator comparator = null;
+        Comparator comparator = new Compare();
 
         /*
          * TODO(Студент): Отсортируйте массив persons по возрастанию
