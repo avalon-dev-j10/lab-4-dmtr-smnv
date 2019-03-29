@@ -10,28 +10,18 @@ public class Main {
 
         String[] strings = new String[20];
         for (int i = 0; i < strings.length; i++) {
-            strings[i] = "Случайная строка " + new Random().nextInt(21);
+            strings[i] = "Случайная строка " + new Random().nextInt(10);
         }
 
         Person[] persons = new Employee[20];
         for (int i = 0; i < persons.length; i++) {
             persons[i] = new Employee(
-                    "John Doe " + new Random().nextInt(21),
+                    "John Doe " + new Random().nextInt(10),
                     new Date(new Random().nextInt(Integer.MAX_VALUE)));
         }
 
         Sort sort = new Sorter();
 
-        /*
-         * TODO(Студент): Проинициализируйте переменную comparator
-         *
-         * 1. Создайте класс, реализующий интерфейс Comparator.
-         *    Подумайте о контексте, в котором будет
-         *    использоваться экземпляр.
-         *
-         * 2. Проинициализируйте переменную comparator
-         *    экземпляром созданного класса.
-         */
         Comparator comparator = new Compare();
 
         /*
@@ -46,16 +36,6 @@ public class Main {
          */
         sort.sort(persons);
 
-        /*
-         * TODO(Студент): Отсортируйте массив strings по возрастанию
-         *
-         * 1. Если всё сделано правильно, предложенный вызов
-         *    метода sort должен отсортировать массив по
-         *    возрастанию.
-         *
-         * 2. С использованием отладчика убедитесь в том,
-         *    что массив отсортирован по возрастанию.
-         */
         sort.sort(strings);
 
         /*

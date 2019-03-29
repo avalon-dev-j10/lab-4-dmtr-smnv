@@ -9,10 +9,9 @@ public class Compare implements Comparator {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int compare(Person empl1, Person empl2) {
-        String name1 = empl1.getName();
-        String name2 = empl2.getName();
-        return name1.compareTo(name2);
+    @Override
+    public Comparator reversed() {
+        return Comparator.super.reversed(); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
