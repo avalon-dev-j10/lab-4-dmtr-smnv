@@ -22,22 +22,6 @@ public class Employee implements Person {
         return birthDate;
     }
 
-//    @Override
-//    public int compareTo(Object o) {
-//        Employee empl = (Employee) o;
-//        if (this.name.compareTo(empl.name) > 0) {
-//            return 1;
-//        } else if (this.name.compareTo(empl.name) < 0) {
-//            return -1;
-//        } else
-//            if (this.birthDate.compareTo(empl.birthDate) > 0) {
-//            return 1;
-//        } else if (this.birthDate.compareTo(empl.birthDate) < 0) {
-//            return -1;
-//        } else {
-//            return 0;
-//        }
-//    }
     @Override
     public int compareTo(Object o) {
         Employee empl = (Employee) o;
