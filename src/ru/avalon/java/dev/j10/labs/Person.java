@@ -21,12 +21,12 @@ public interface Person extends Comparable {
      *
      * @return имя человека в виде строки
      */
-    String getName();
+    String getNAME();
 
     /**
      * Возвращает дату рождения человека.
      *
      * @return дата рождения в виде экземпляра типа {@link Date}
      */
-    Date getBirthDate();
+    Date getBIRTH_DATE();
 }

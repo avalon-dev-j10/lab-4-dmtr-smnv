@@ -4,32 +4,32 @@ import java.util.Date;
 
 public class Employee implements Person {
 
-    private final String name;
-    private final Date birthDate;
+    private final String NAME;
+    private final Date BIRTH_DATE;
 
-    public Employee(String name, Date birthDate) {
-        this.name = name;
-        this.birthDate = birthDate;
+    public Employee(String NAME, Date BIRTH_DATE) {
+        this.NAME = NAME;
+        this.BIRTH_DATE = BIRTH_DATE;
     }
 
     @Override
-    public String getName() {
-        return name;
+    public String getNAME() {
+        return NAME;
     }
 
     @Override
-    public Date getBirthDate() {
-        return birthDate;
+    public Date getBIRTH_DATE() {
+        return BIRTH_DATE;
     }
 
     @Override
     public int compareTo(Object o) {
         Employee empl = (Employee) o;
-        if (this.name.compareTo(empl.name) > 0) {
+        if (this.NAME.compareTo(empl.NAME) > 0) {
             return 1;
-        } else if ((this.name.compareTo(empl.name) == 0) && (this.birthDate.compareTo(empl.birthDate) > 0)) {
+        } else if ((this.NAME.compareTo(empl.NAME) == 0) && (this.BIRTH_DATE.compareTo(empl.BIRTH_DATE) > 0)) {
             return 1;
-        } else if (this.name.compareTo(empl.name) < 0) {
+        } else if (this.NAME.compareTo(empl.NAME) < 0) {
             return -1;
         } else {
             return 0;
